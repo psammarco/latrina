@@ -203,3 +203,9 @@ src_install() {
 	java-vm_revdep-mask
 	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
+
+pkg_postinst() {
+    elog "Upon installation completed, please enable Java on your system by running:"
+	elog "sudo eselect java-vm set system oracle-jre-bin-1.8"
+	elog "eselect java-vm set user oracle-jre-bin-1.8"
+}
