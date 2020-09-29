@@ -208,4 +208,6 @@ pkg_postinst() {
     elog "Upon installation completed, please enable Java on your system by running:"
 	elog "sudo eselect java-vm set system oracle-jre-bin-1.8"
 	elog "eselect java-vm set user oracle-jre-bin-1.8"
+	elog ""
+
 }
