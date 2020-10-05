@@ -66,7 +66,7 @@ src_install() {
 	fi
 
 	dodir "${dest}"
-	cp -pPR	bin lib man "${ddest}" || die
+	cp -pPR	bin conf include jmods legal lib man release "${ddest}" || die
 
 	if use nsplugin ; then
 		local nsplugin_link=${nsplugin##*/}
