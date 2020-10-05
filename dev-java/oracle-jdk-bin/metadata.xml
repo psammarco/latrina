@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>pietro.sammarco@googlemail.com</email>
+    <name>Java</name>
+  </maintainer>
+  <longdescription>Oracle Java JDK 15, Official Binary Distribution</longdescription>
+  <use>
+    <flag name="headless-awt">Don't install the X backend for AWT, needed by some GUIs (used to be X flag)</flag>
+    <flag name="pax_kernel">Use paxctl to mark the JVM binaries</flag>
+  </use>
+</pkgmetadata>
