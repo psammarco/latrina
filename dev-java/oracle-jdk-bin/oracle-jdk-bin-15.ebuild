@@ -79,23 +79,6 @@ src_install() {
 	# Otherwise a PaX enabled kernel will kill the VM. Bug #215225 #389751
 	java-vm_set-pax-markings "${ddest}"
 
-	# see bug #207282
-	einfo "Creating the Class Data Sharing archives"
-	case ${ARCH} in
-		arm|ia64)
-			${ddest}/bin/java -client -Xshare:dump || die
-			;;
-		x86)
-			${ddest}/bin/java -client -Xshare:dump || die
-			# limit heap size for large memory on x86 #467518
-			# this is a workaround and shouldn't be needed.
-			${ddest}/bin/java -server -Xms64m -Xmx64m -Xshare:dump || die
-			;;
-		*)
-			${ddest}/bin/java -server -Xshare:dump || die
-			;;
-	esac
-
 	# Remove empty dirs we might have copied.
 	find "${D}" -type d -empty -exec rmdir -v {} + || die
 
