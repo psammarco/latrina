@@ -101,7 +101,7 @@ src_install() {
 
 	set_java_env
 	java-vm_revdep-mask
-	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
+	#java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
 
 pkg_postinst() {
