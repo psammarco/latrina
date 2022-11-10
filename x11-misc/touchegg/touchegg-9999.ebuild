@@ -29,7 +29,7 @@ RDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXi
 	dev-libs/glib:2
-	gtk? ( x11-libs/gtk+:3 )
+	x11-libs/gtk+:3
 	virtual/libudev
 "
 DEPEND="${RDEPEND}"
