@@ -15,7 +15,7 @@ EGIT_COMMIT="2.0.14"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk"
+IUSE="gtk systemd"
 
 CONFIG_CHECK="INPUT_EVDEV"
 
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}"
 src_configure() {
 	local mycmakeargs=(
 		-DAUTO_COLORS="$(usex gtk)"
-		-DUSE_SYSTEMD=off
+		-DUSE_SYSTEMD="$(usex systemd)"
 	)
 
 	cmake_src_configure
