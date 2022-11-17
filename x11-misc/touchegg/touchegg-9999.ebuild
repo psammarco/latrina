@@ -37,13 +37,15 @@ DEPEND="${RDEPEND}"
 src_configure() {
 	local mycmakeargs=(
 		-DAUTO_COLORS="$(usex gtk)"
-		-DUSE_SYSTEMD="$(usex systemd)"
+		# upstream doesn't like linking against libsystemd
+		#-DUSE_SYSTEMD="$(usex systemd)"
 	)
 
 	cmake_src_configure
 }
 
-src_install(){
+src_install() {
 	cmake_src_install
-	doinitd "${FILESDIR}"/touchegg
+	doinitd "${FILESDIR}"/"${PN}"
+	systemd_dounit "${FILESDIR}"/"${PN}".service
 }
