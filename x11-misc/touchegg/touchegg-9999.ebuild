@@ -15,7 +15,7 @@ EGIT_COMMIT="2.0.14"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk systemd"
+IUSE="gtk"
 
 CONFIG_CHECK="INPUT_EVDEV"
 
