@@ -38,7 +38,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DAUTO_COLORS="$(usex gtk)"
 		# upstream doesn't like linking against libsystemd
-		#-DUSE_SYSTEMD="$(usex systemd)"
+		-DUSE_SYSTEMD="OFF"
 	)
 
 	cmake_src_configure
