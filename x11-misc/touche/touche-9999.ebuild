@@ -17,13 +17,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+BDEPEND="
+	dev-util/meson
+	npm? (
+	net-libs/nodejs
+	)
+"
+
 RDEPEND="
 	dev-libs/gjs
 	gui-libs/libadwaita
 	x11-misc/touchegg
 "
-DEPEND="## npm needs some figure out!!
-		dev-util/meson
+DEPEND="
 		dev-libs/gobject-introspection
 		${RDEPEND}
 "
