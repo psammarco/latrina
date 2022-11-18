@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit git-r3
+inherit git-r3 meson
 
 DESCRIPTION="The desktop application to configure Touchégg"
 HOMEPAGE="https://github.com/JoseExposito/touche"
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 BDEPEND="
-	dev-util/meson
 	npm? (
 	net-libs/nodejs
 	)
