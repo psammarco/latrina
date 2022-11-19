@@ -15,10 +15,10 @@ EGIT_COMMIT="2.0.7"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="npm"
 
 BDEPEND="
-	npm? (
+	!npm? (
 	net-libs/nodejs
 	)
 "
