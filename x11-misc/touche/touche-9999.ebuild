@@ -33,11 +33,7 @@ DEPEND="
 		${RDEPEND}
 "
 
-src_configure() {
-	local mycmakeargs=(
-	)
-
-}
-
 src_install() {
+		npm install
+		meson compile -C build
 }
